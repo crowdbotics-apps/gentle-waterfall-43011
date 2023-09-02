@@ -1,6 +1,7 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, TextInput, Image, TouchableOpacity, Linking } from "react-native";
+import { SafeAreaView, StyleSheet, Text, TextInput, Image, TouchableOpacity } from "react-native";
 
 const App = () => {
   const navigation = useNavigation();
@@ -19,12 +20,12 @@ const App = () => {
     }}>
         <Text style={styles.forgotPassword}>Forgot password</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => Linking.openURL("http://example.com")}>
-        <Text style={styles.termsAndConditions}>
-          By signing-in, I agreed to Terms and Conditions and Privacy policy
-        </Text>
+      <TouchableOpacity onPress={() => {
+      navigation.navigate("ScreenAI7");
+    }}>
+        <Text style={styles.termsAndConditions}>{"\n          By signing-in, I agreed to Terms and Conditions and "}</Text>
       </TouchableOpacity>
-    </SafeAreaView>;
+    <Pressable><Text style={styles.tvmyCzlB}>{"Privacy policy"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -71,6 +72,16 @@ const styles = StyleSheet.create({
     color: "blue",
     marginTop: 15,
     textAlign: "center"
+  },
+  tvmyCzlB: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    position: "absolute",
+    left: -44,
+    top: 4
   }
 });
 export default App;
