@@ -13,7 +13,7 @@ const App = () => {
       <TextInput style={styles.input} placeholder="Email address" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       <TouchableOpacity style={styles.button} onPress={() => {
-      navigation.navigate("ScreenAI11");
+      navigation.navigate("ScreenAI12");
     }}>
         <Text style={styles.buttonText}>Log in</Text>
       </TouchableOpacity>
