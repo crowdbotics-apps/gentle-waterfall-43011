@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React from "react";
 import { SafeAreaView, View, Text, TouchableOpacity, FlatList, StyleSheet } from "react-native";
 const data = [{
@@ -19,9 +20,11 @@ const ScreenComponent = ({
 
   return <SafeAreaView style={styles.container}>
       <View style={styles.topBar}>
-        <Text style={styles.espText}>ESP: <Text style={{
-          color: connectionState
-        }}>{connectionState}</Text></Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI13");
+      }}><Text style={styles.espText}>ESP: <Text style={{
+            color: connectionState
+          }}>{connectionState}</Text></Text></Pressable>
       </View>
       <View style={styles.sideMenu}>
         <TouchableOpacity style={styles.button} onPress={() => {}}>
