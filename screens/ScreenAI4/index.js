@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
-    marginBottom: 16,
-    paddingLeft: 8
+    paddingLeft: 10,
+    marginBottom: 10
   },
   buttonContainer: {
     flexDirection: 'row',
