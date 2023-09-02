@@ -15,7 +15,7 @@ const App = () => {
         <Text style={styles.buttonText}>Log in</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => {
-      navigation.navigate("ScreenAI4");
+      navigation.navigate("ScreenAI3");
     }}>
         <Text style={styles.forgotPassword}>Forgot password</Text>
       </TouchableOpacity>
