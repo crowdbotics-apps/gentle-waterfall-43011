@@ -36,9 +36,9 @@ const ScreenComponent = ({
         </TouchableOpacity>
         <FlatList data={data} keyExtractor={item => item.id} renderItem={({
         item
-      }) => <TouchableOpacity onPress={() => navigation.navigate("PatientDetailScreen", {
-        id: item.id
-      })}>
+      }) => <TouchableOpacity onPress={() => {
+        navigation.navigate("ScreenAI24");
+      }}>
               <Text>{item.name}</Text>
             </TouchableOpacity>} />
         <TouchableOpacity style={styles.button} onPress={() => {

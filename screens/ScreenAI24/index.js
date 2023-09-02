@@ -1,8 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, TouchableOpacity, FlatList, Image, ScrollView } from "react-native";
 
 const SessionScreen = () => {
+  const navigation = useNavigation();
   const [selectedSession, setSelectedSession] = useState(null);
   const sessions = [{
     id: "1",
@@ -18,7 +20,9 @@ const SessionScreen = () => {
   ];
   return <SafeAreaView style={_styles.iJgxMQne}>
       <View style={_styles.TmLBGOEb}>
-        <TouchableOpacity style={_styles.button} onPress={() => {}}>
+        <TouchableOpacity style={_styles.button} onPress={() => {
+        navigation.navigate("ScreenAI27");
+      }}>
           <Text style={_styles.buttonText}>Start new session</Text>
         </TouchableOpacity>
       </View>
