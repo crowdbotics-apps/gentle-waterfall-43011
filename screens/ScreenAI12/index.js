@@ -27,11 +27,15 @@ const ScreenComponent = ({
           }}>{connectionState}</Text></Text></Pressable>
       </View>
       <View style={styles.sideMenu}>
-        <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI17");
+      }}>
           <Text style={styles.buttonText}>Settings</Text>
         </TouchableOpacity>
         <Text>Name, Email</Text>
-        <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI28");
+      }}>
           <Text style={styles.buttonText}>Log out</Text>
         </TouchableOpacity>
         <FlatList data={data} keyExtractor={item => item.id} renderItem={({
