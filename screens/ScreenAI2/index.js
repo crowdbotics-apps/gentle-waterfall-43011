@@ -12,7 +12,9 @@ const App = () => {
       <Text style={styles.appName}>App Name</Text>
       <TextInput style={styles.input} placeholder="Email address" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      <TouchableOpacity style={styles.button} onPress={() => console.log("Log in")}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI9");
+    }}>
         <Text style={styles.buttonText}>Log in</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => {
@@ -25,7 +27,9 @@ const App = () => {
     }}>
         <Text style={styles.termsAndConditions}>{"\n          By signing-in, I agreed to Terms and Conditions and "}</Text>
       </TouchableOpacity>
-    <Pressable><Text style={styles.tvmyCzlB}>{"Privacy policy"}</Text></Pressable></SafeAreaView>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI8");
+    }}><Text style={styles.tvmyCzlB}>{"Privacy policy"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
